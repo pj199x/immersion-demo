@@ -1,0 +1,25 @@
+db:
+  replicaCount: 1
+  image:
+    repository: postgres
+    tag: 15-alpine #17-alpine
+redis:
+  replicaCount: 1
+  image:
+    repository: redis
+    tag: alpine #7.4.4-alpine
+result:
+  replicaCount: 1
+  resources:
+    cpu: 10m
+    memory: 64Mi
+vote:
+  replicaCount: 1
+  resources:
+    cpu: 10m
+    memory: 64Mi
+worker:
+  replicaCount: 1
+  resources:
+    cpu: 10m
+    memory: 64Mi
