@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1  # Changed from apps/v1
+kind: Rollout                     # Changed from Deployment
+metadata:
+  labels:
+    app: vote
+  name: vote
+  namespace: immersion-demo
+spec:
+  replicas: {{ .Values.vote.replicaCount }}
+  selector:
+    matchLabels:
+      app: vote
+  template:
+    metadata:
+      labels:
+        app: vote
+    spec:
+      containers:
+      - image: dockersamples/examplevotingapp_vote
+        name: vote
+        ports:
+        - containerPort: 80
+          name: vote
+        resources:
+          requests:
+            cpu: {{ .Values.vote.resources.cpu }}
+            memory: {{ .Values.vote.resources.memory }}
+  strategy:
+    blueGreen:  # Changed from rollingUpdate or recreate
+      activeService: voting-app-vote
+      previewService: voting-app-vote-preview
