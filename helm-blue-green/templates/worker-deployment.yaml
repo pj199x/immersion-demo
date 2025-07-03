@@ -1,5 +1,5 @@
-apiVersion: argoproj.io/v1alpha1  # Changed from apps/v1
-kind: Rollout                     # Changed from Deployment
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   labels:
     app: worker
