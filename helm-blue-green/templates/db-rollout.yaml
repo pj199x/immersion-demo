@@ -35,3 +35,4 @@ spec:
     blueGreen:  # Changed from rollingUpdate or recreate
       activeService: db
       previewService: db-preview
+      autoPromotionEnabled: false
