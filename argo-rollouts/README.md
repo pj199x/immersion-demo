@@ -5,3 +5,4 @@ helm dependency update immersion-demo/argo-rollouts
 helm template argo-rollouts immersion-demo/argo-rollouts --namespace argo-rollouts --values immersion-demo/argo-rollouts/values.yaml
 helm upgrade argo-rollouts immersion-demo/argo-rollouts --install --namespace argo-rollouts --values immersion-demo/argo-rollouts/values.yaml --create-namespace --timeout 10m --wait
 ```
+_Ref: [Argo Rollouts Chart](https://github.com/argoproj/argo-helm/tree/main/charts/argo-rollouts)_
