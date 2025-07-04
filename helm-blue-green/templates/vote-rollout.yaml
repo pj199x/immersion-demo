@@ -28,3 +28,4 @@ spec:
     blueGreen:  # Changed from rollingUpdate or recreate
       activeService: vote
       previewService: vote-preview
+      autoPromotionEnabled: false
