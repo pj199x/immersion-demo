@@ -28,3 +28,4 @@ spec:
     blueGreen:  # Changed from rollingUpdate or recreate
       activeService: result
       previewService: result-preview
+      autoPromotionEnabled: false
