@@ -30,3 +30,4 @@ spec:
     blueGreen:  # Changed from rollingUpdate or recreate
       activeService: redis
       previewService: redis-preview
+      autoPromotionEnabled: false
